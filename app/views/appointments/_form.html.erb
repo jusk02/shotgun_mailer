@@ -1,0 +1,67 @@
+<%= form_for(appointment) do |f| %>
+  <% if appointment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
+
+      <ul>
+      <% appointment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name ,'Nombre del paciente'%>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email, 'Correo' %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date, 'Fecha de cita' %>
+    <%= f.datetime_select :date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :treatment, 'Tratamiento' %>
+    <%= f.text_area :treatment %>
+  </div>
+
+   <div class="field">
+    <%= f.label :alternate_doctor_name, 'Nombre del doctor no conseguido' %>
+    <%= f.text_field :alternate_doctor_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :doctor_name, 'Nombre del doctor' %>
+    <%= f.text_field :doctor_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :doctor_spec, 'Especialidad del doctor' %>
+    <%= f.text_field :doctor_spec %>
+  </div>
+
+  <div class="field">
+    <%= f.label :doctor_address, 'Direccion del doctor' %>
+    <%= f.text_field :doctor_address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :doctor_phone, 'Telefono del doctor' %>
+    <%= f.number_field :doctor_phone %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email_type, 'Correo a enviar' %>
+    <%= f.select(:email_type, options_for_select(['Cita confirmada','Cita con segundo doctor','No se ubica cita'])) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Enviar" %>
+  </div>
+<% end %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @appointment.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @appointment.email %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @appointment.date %>
+</p>
+
+<p>
+  <strong>Doctor name:</strong>
+  <%= @appointment.doctor_name %>
+</p>
+
+<p>
+  <strong>Doctor spec:</strong>
+  <%= @appointment.doctor_spec %>
+</p>
+
+<p>
+  <strong>Doctor address:</strong>
+  <%= @appointment.doctor_address %>
+</p>
+
+<p>
+  <strong>Email type:</strong>
+  <%= @appointment.email_type %>
+</p>
+
+<%= link_to 'Edit', edit_appointment_path(@appointment) %> |
+<%= link_to 'Back', appointments_path %>
