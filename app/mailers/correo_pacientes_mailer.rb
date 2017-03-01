@@ -1,6 +1,6 @@
 class CorreoPacientesMailer < ApplicationMailer
 
-	  default from: "fatnclientes01@topdoctors.it"
+	  default from: "atnclientes01@topdoctors.it"
 
   def sample_email1(appointment)
     @user = appointment
