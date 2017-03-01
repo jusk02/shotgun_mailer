@@ -30,10 +30,13 @@ class AppointmentsController < ApplicationController
       if @appointment.save
         if @appointment.email_type == "Cita confirmada"
           CorreoPacientesMailer.sample_email1(@appointment).deliver_now
+          CorreoPacientesMailer.message_me(@appointment).deliver_now
         elsif @appointment.email_type == "Cita con segundo doctor"
           CorreoPacientesMailer.sample_email2(@appointment).deliver_now
+          CorreoPacientesMailer.message_me(@appointment).deliver_now
         elsif @appointment.email_type == "No se ubica cita"
           CorreoPacientesMailer.sample_email3(@appointment).deliver_now
+          CorreoPacientesMailer.message_me(@appointment).deliver_now
         end
 
         format.html { redirect_to "/", notice: 'Appointment was successfully created.' }
