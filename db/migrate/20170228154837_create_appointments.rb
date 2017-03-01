@@ -9,7 +9,7 @@ class CreateAppointments < ActiveRecord::Migration[5.0]
       t.string :doctor_name
       t.string :doctor_spec
       t.string :doctor_address
-      t.integer :doctor_phone
+      t.integer :doctor_phone, :limit => 8
       t.string :email_type
 
       t.timestamps
