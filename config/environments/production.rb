@@ -90,10 +90,11 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address:              'smtp.topdoctors.it',
     port:                 587,
-    domain:               'likeu.co',
+    domain:               'topdoctors.it',
     user_name:            'atnclientes01@topdoctors.it',
     password:             '6wP!Va)y7+ss',
     authentication:       'plain',
     enable_starttls_auto: true
+    :openssl_verify_mode => 'none'
   }
 end
