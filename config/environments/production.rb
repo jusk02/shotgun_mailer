@@ -94,7 +94,7 @@ Rails.application.configure do
     user_name:            'atnclientes01@topdoctors.it',
     password:             '6wP!Va)y7+ss',
     authentication:       'plain',
-    enable_starttls_auto: true
+    enable_starttls_auto: true,
     openssl_verify_mode:  'none'
   }
 end
