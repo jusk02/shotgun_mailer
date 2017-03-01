@@ -18,7 +18,7 @@ class CorreoPacientesMailer < ApplicationMailer
   end
 
   def message_me(appointment)
-    @appointment = appointment
+    @user = appointment
     mail(to: "atnclientes01@topdoctors.it" , subject: 'Confirmación de cita enviada')
   end
 

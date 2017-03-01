@@ -8,56 +8,55 @@ Datos de correo enviado:
 
 <p>
   <strong>Nombre del paciente:</strong>
-  <%= @appointment.name %>
+  <%= @user.name %>
 </p>
 
 <p>
   <strong>Email del paciente:</strong>
-  <%= @appointment.email %>
+  <%= @user.email %>
 </p>
 
 <p>
   <strong>Fecha de cita:</strong>
-  <%= @appointment.date %>
+  <%= @user.date %>
 </p>
 
 <p>
   <strong>Tratamiento:</strong>
-  <%= @appointment.treatment %>
+  <%= @user.treatment %>
 </p>
 
 <p>
   <strong>Doctor no conseguido:</strong>
-  <%= @appointment.alternate_doctor_name %>
+  <%= @user.alternate_doctor_name %>
 </p>
 
 <p>
   <strong>Doctor :</strong>
-  <%= @appointment.doctor_name %>
+  <%= @user.doctor_name %>
 </p>
 
 <p>
   <strong>Especialidad del doctor:</strong>
-  <%= @appointment.doctor_spec %>
+  <%= @user.doctor_spec %>
 </p>
 
 <p>
   <strong>telefono del doctor:</strong>
-  <%= @appointment.doctor_phone %>
+  <%= @user.doctor_phone %>
 </p>
 
 <p>
   <strong>Direccion del doctor:</strong>
-  <%= @appointment.doctor_address %>
+  <%= @user.doctor_address %>
 </p>
 
 <p>
   <strong>Tipo de correo enviado:</strong>
-  <%= @appointment.email_type %>
+  <%= @user.email_type %>
 </p>
 
-<%= link_to 'Edit', edit_appointment_path(@appointment) %> |
-<%= link_to 'Back', appointments_path %>
+
 
 </body>
 </html>
