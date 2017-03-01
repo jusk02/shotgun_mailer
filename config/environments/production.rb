@@ -95,6 +95,6 @@ Rails.application.configure do
     password:             '6wP!Va)y7+ss',
     authentication:       'plain',
     enable_starttls_auto: true
-    :openssl_verify_mode => 'none'
+    openssl_verify_mode:  'none'
   }
 end
